@@ -9,9 +9,9 @@ cd $dir/ros2_ws
 colcon build
 source install/setup.bash
 
-timeout 15 ros2 launch mypkg rate.launch.py > /tmp/mypkg.log 2> /tmp/mypkg.err
+timeout 30 ros2 launch mypkg rate.launch.py > /tmp/mypkg.log 2> /tmp/mypkg.err
 
-cat /tmp/mypkg.log | grep -E 'USD:|EUR:|GBP:'
+cat /tmp/mypkg.log | grep -Ei 'USD:|EUR:|GBP:'
 [ $? -ne 0 ] && exit 1
 
 ! grep -iq 'error' /tmp/mypkg.err

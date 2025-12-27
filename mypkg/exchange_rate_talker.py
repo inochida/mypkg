@@ -18,7 +18,7 @@ class CurrencyTalker(Node):
             self.pubs[code] = self.create_publisher(Float64, topic, 10)
         
         self.timer = self.create_timer(15.0, self.timer_callback)
-
+        self.timer_callback()
     def timer_callback(self):
         for code, topic in self.currency_map.items():
             try:
