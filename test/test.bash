@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2025 Sota Ino
 # SPDX-License-Identifier: BSD-3-Clause
 
+
 dir=~
 [ "$1" != "" ] && dir="$1"
 
