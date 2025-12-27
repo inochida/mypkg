@@ -7,10 +7,10 @@ dir=~
 
 cd $dir/ros2_ws
 colcon build
-source install/setup.bash
 
-timeout 30 stdbuf -oL bash -lc "ros2 launch mypkg rate.launch.py" \
-  > /tmp/mypkg.log 2> /tmp/mypkg.err
+timeout 30 stdbuf -oL bash -lc \
+"source /opt/ros/humble/setup.bash && source install/setup.bash && ros2 launch mypkg rate.launch.py" \
+> /tmp/mypkg.log 2> /tmp/mypkg.err
 
 sleep 2
 
