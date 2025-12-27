@@ -18,7 +18,7 @@ setup(
     zip_safe=True,
     maintainer='inochi',
     maintainer_email='souchin.i.19@gmail.com',
-    description='ロボットシステム学課題2',
+    description='ロボットシステム学課題',
     license='BSD-3-Clause',
     extras_require={
         'test': [

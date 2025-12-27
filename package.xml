@@ -6,6 +6,7 @@
   <description>ロボットシステム学課題</description>
   <maintainer email="souchin.i.19@gmail.com">inochi</maintainer>
   <license>BSD-3-Clause</license>
+  
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>launch_ros</exec_depend>
