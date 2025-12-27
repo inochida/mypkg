@@ -27,8 +27,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'talker = mypkg.talker:main',
-            'listener = mypkg.listener:main',
+            'talker = mypkg.exchange_rate_talker:main',
+            'listener = mypkg.exchange_rate_listener:main',
         ],
     },
 )
