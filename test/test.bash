@@ -9,12 +9,15 @@ cd $dir/ros2_ws
 colcon build
 source install/setup.bash
 
-timeout 30 ros2 launch mypkg rate.launch.py > /tmp/mypkg.log 2> /tmp/mypkg.err
+timeout 30 stdbuf -oL ros2 launch mypkg rate.launch.py > /tmp/mypkg.log 2> /tmp/mypkg.err
 
-cat /tmp/mypkg.log | grep -Ei 'USD|EUR|GBP'
-if [ $? -ne 0 ]; then
-    echo "Current Log Content:"
+sleep 2
+
+if ! grep -Ei 'USD|EUR|GBP' /tmp/mypkg.log; then
+    echo "--- Standard Output (/tmp/mypkg.log) ---"
     cat /tmp/mypkg.log
+    echo "--- Standard Error (/tmp/mypkg.log) ---"
+    cat /tmp/mypkg.err
     exit 1
 fi
 
