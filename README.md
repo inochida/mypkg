@@ -16,7 +16,7 @@
 - サブスクライブするトピック：`/dollar_rate`、`/euro_rate`、`/pound_rate`
 - 表示：「USD: 123.45 JPY」のようにUSD、EUR、GBPを日本円に換算して表示します。
 
-##トピックの説明
+## トピックの説明
 ### /dollar_rate
 - 型：`std_msgs/Float64`
 - 内容：1米ドル（USD）あたりの日本円（JPY）価格。
