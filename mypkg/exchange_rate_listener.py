@@ -11,7 +11,9 @@ class CurrencyListener(Node):
         self.create_subscription(Float64, 'pound_rate',  lambda msg: self.cb(msg, 'GBP'), 10)
 
     def cb(self, msg, name):
-        self.get_logger().info(f'{name}: {msg.data} JPY')
+        text = f'{name}: {msg.data} JPY'
+        print(text)
+        self.get_logger().info(text)
 
 def main():
     rclpy.init()
