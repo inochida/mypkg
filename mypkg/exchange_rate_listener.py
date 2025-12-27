@@ -17,5 +17,7 @@ class CurrencyListener(Node):
 
 def main():
     rclpy.init()
-    rclpy.spin(CurrencyListener())
+    node = CurrencyListener()
+    rclpy.spin(node)
+    node.destroy_node()
     rclpy.shutdown()

@@ -7,13 +7,13 @@ def generate_launch_description():
             package='mypkg',
             executable='talker',
             name='talker_node',
-            parameters=[{'currencies': ['USD', 'EUR', 'GBP']}]
+            parameters=[{'currencies': ['USD', 'EUR', 'GBP']}],
             output='screen',
         ),
         Node(
             package='mypkg',
             executable='listener',
-            name='listener_node'
+            name='listener_node',
             output='screen',
         ),
     ])
