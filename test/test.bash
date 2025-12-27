@@ -11,8 +11,12 @@ source install/setup.bash
 
 timeout 30 ros2 launch mypkg rate.launch.py > /tmp/mypkg.log 2> /tmp/mypkg.err
 
-cat /tmp/mypkg.log | grep -Ei 'USD:|EUR:|GBP:'
-[ $? -ne 0 ] && exit 1
+cat /tmp/mypkg.log | grep -Ei 'USD|EUR|GBP'
+if [ $? -ne 0 ]; then
+    echo "Current Log Content:"
+    cat /tmp/mypkg.log
+    exit 1
+fi
 
 ! grep -iq 'error' /tmp/mypkg.err
 
