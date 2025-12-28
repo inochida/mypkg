@@ -84,6 +84,9 @@ data: 211.24
 - ©2025 Sota Ino
 
 ## 参考文献
-- [ExchangeRate-API](https://app.exchangerate-api.com/dashboard)
-- [Requestsの使い方](https://note.nkmk.me/python-requests-usage/)
-- [response.jsonとは？](https://pythonaiclarifydoubts.com/response-json/)
+- データの出典
+  - [ExchangeRate-API](https://app.exchangerate-api.com/dashboard)
+  このパッケージは上記のサイトのAPIを使用して為替データを取得しています。
+- 参考資料
+  - [Requestsの使い方](https://note.nkmk.me/python-requests-usage/)
+  - [response.jsonとは？](https://pythonaiclarifydoubts.com/response-json/)
